@@ -25,6 +25,7 @@ github_username:  caepa
 # Build settings
 markdown: kramdown
 theme: minima
+permalink: /:title/
 plugins:
   - jekyll-feed
 
