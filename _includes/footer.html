@@ -1,0 +1,25 @@
+
+<script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.js"></script>
+<!--script src="{{ "/assets/js/main.js" | relative_url }}"></script-->
+<script>
+  window.mdc.autoInit();
+
+  var drawer = new mdc.drawer.MDCTemporaryDrawer(document.querySelector('.mdc-drawer--temporary'));
+  document.querySelector('.mdc-top-app-bar__navigation-icon').addEventListener('click', function(evt) {
+    evt.preventDefault();
+    drawer.open = true;
+  });
+
+  var toolbar = mdc.topAppBar.MDCTopAppBar.attachTo(document.querySelector('.mdc-top-app-bar'));
+  toolbar.fixedAdjustElement = document.querySelector('.mdc-toolbar-fixed-adjust');
+
+  var menu = new mdc.menu.MDCMenu(document.querySelector('.mdc-menu'));
+  document.querySelector('#apps').addEventListener('click', function(evt) {
+    evt.preventDefault();
+    menu.open = !menu.open;
+  });
+
+  <!-- breaks out of scrollable element -->
+  var scroll = document.querySelector('.mdc-list-item--selected');
+  scroll.scrollIntoView({block:'center'});
+</script>

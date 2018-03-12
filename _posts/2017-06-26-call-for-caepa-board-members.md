@@ -9,16 +9,35 @@ The Colorado Adult Education Professional Association (CAEPA) is calling for adu
 As adult educators, we share a common desire to prepare adults to succeed, to reach more adults who struggle with literacy, numeracy, and problem-solving. CAEPA is here to support your efforts as we continue to Impact Colorado through adult basic education.
 
 Sincerely,
+
 CAEPA Board of Directors
 
-George O’Clair, President
-Karen Jaramillo, President-Elect
-Nadine Kerstetter, Secretary
-Karen Carr, Treasurer
+George O’Clair
+  : President
 
-Gaye Horne, Board Member
-Jason Kilpatrick, Board Member
-Jesus Marrufo, Board Member
-Leigh Burrows, Board Member
-Teona Shainidze Krebs, Board Member
-Teresa Malone, Board Member
+Karen Jaramillo
+  : President-Elect
+
+Nadine Kerstetter
+  : Secretary
+
+Karen Carr
+  : Treasurer
+
+Gaye Horne
+  : Board Member
+
+Jason Kilpatrick
+  : Board Member
+
+Jesus Marrufo
+  : Board Member
+
+Leigh Burrows
+  : Board Member
+
+Teona Shainidze Krebs
+  : Board Member
+
+Teresa Malone
+  : Board Member
