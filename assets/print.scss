@@ -1,0 +1,59 @@
+---
+---
+@page {
+  margin: 1in;
+}
+
+@media print {
+
+  aside.mdc-drawer,
+  main[hero],
+  .mdc-fab,
+  .mdc-card__actions {
+    display: none;
+  }
+
+  header.mdc-top-app-bar {
+    background: none;
+    box-shadow: none;
+    display: block;
+    margin: 0;
+    padding: 0;
+    & .mdc-button,
+      .material-icons {
+      display: none;
+    }
+    & img {
+      width: 2in;
+      filter: grayscale(100%);
+      position: relative;
+      left: 4.5in;
+    }
+  }
+
+  body,
+  main,
+  main .mdc-toolbar-fixed-adjust,
+  main .mdc-layout-grid,
+  section .mdc-layout-grid,
+  section .mdc-layout-grid__inner,
+  section .mdc-layout-grid,
+  section .mdc-card {
+    background: none;
+    box-shadow: none;
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  article .post {
+    color: rgba(0,0,0,0.87);
+    margin: 3cm;
+  }
+
+  a:after {
+	   content: " <" attr(href) "> ";
+  }
+
+}
