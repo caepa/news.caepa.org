@@ -19,15 +19,17 @@
     display: block;
     margin: 0;
     padding: 0;
-    & .mdc-button,
+    & .mdc-top-app-bar__title,
+      .mdc-button,
       .material-icons {
       display: none;
     }
     & img {
       width: 2in;
+      margin-bottom: 0.25in;
       filter: grayscale(100%);
-      position: relative;
-      left: 4.5in;
+      // position: relative;
+      // left: 4.5in;
     }
   }
 

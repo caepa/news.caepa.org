@@ -1,16 +1,16 @@
-<header class="mdc-top-app-bar">
+<header class="mdc-top-app-bar mdc-elevation--z4">
   <div class="mdc-top-app-bar__row">
     <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
       <a href="#" class="material-icons mdc-top-app-bar__navigation-icon">menu</a>
-      <!--span class="mdc-top-app-bar__title">Title</span-->
-      <img src="/assets/img/caepa-title.svg" />
+      <span class="mdc-top-app-bar__title">News</span>
     </section>
     <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
       <!--a href="javascript:window.print()" class="material-icons mdc-top-app-bar__action-item" aria-label="Print this page" alt="Print this page">print</a-->
       <a href="{{ "/about" | relative_url }}" class="mdc-button">About</a>
       <a href="{{ "/" | relative_url }}" class="mdc-button">Subscribe</a>
+      <a href="#" id="apps" class="material-icons mdc-top-app-bar__action-item">apps</a>
       <div class="mdc-menu-anchor">
-        <a href="#" id="apps" class="material-icons mdc-top-app-bar__action-item">apps</a>
+        <img src="/assets/img/caepa-title.svg" alt="caepa logo"/>
         <div class="mdc-menu" tabindex="-1"  data-mdc-auto-init="MDCMenu">
           <ul class="mdc-menu__items mdc-list" role="menu" aria-hidden="true">
             <li class="mdc-list-item" role="menuitem" tabindex="0"><i class="material-icons mdc-list-item__graphic">assignment</i><a href="http://www.caepa.org/bylaws" target="_self">CAEPA Bylaws</a></li>
