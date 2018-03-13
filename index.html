@@ -66,10 +66,15 @@ layout: page
   <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups--><div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_ef793a4f17661be843b30ff51_7377e46553" tabindex="-1" value=""></div>
   <section class="mdc-layout-grid">
     <div class="mdc-layout-grid__inner">
-      <div class="mdc-layout-grid__cell--span-12 mdc-text-field" data-mdc-auto-init="MDCTextField">
+      <div class="mdc-layout-grid__cell--span-12 mdc-text-field mdc-text-field--outlined" data-mdc-auto-init="MDCTextField">
         <input class="mdc-text-field__input required email validate" id="mce-EMAIL" type="email" value="" name="EMAIL">
         <label class="mdc-floating-label" for="mce-EMAIL">Email</label>
-        <div class="mdc-line-ripple"></div>
+        <div class="mdc-text-field__outline">
+          <svg>
+            <path class="mdc-text-field__outline-path"/>
+          </svg>
+        </div>
+        <div class="mdc-text-field__idle-outline"></div>
       </div>
     </div>
   </section>
