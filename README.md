@@ -1,12 +1,12 @@
-[![Build Status](https://travis-ci.org/caepa/news.caepa.org.svg?branch=master)](https://travis-ci.org/caepa/caepa.github.io) master branch
+[![Build Status](https://travis-ci.org/caepa/news.caepa.org.svg?branch=master)](https://travis-ci.org/caepa/caepa.github.io)
 
-[![Build Status](https://travis-ci.org/caepa/news.caepa.org.svg?branch=gh-pages)](https://travis-ci.org/caepa/caepa.github.io) gh-pages
 
 # news.caepa.org
 
 Providing Colorado Leadership in Adult Education and Literacy since 1935
 
 The Colorado Adult Education Professional Association, CAEPA, provides leadership to the field of adult education and family literacy by offering opportunities for professional development, advocacy, and resource sharing to improve the quality of life for every Coloradan.
+
 
 ---
 Built with Material Components for the web
@@ -16,10 +16,11 @@ Developed by a core team of engineers and UX designers at Google, these componen
 
 **[Demos](https://material-components-web.appspot.com/)** (updated with every release)
 
+
 ---
 TODO:
 
-[ ] Layout without drawer for self contained pages
-[ ] Move subscribe form out of index
-[ ] Improve form structure
-[ ] Add staticman
+  - [ ] Layout without drawer for self contained pages
+  - [ ] Move subscribe form out of index
+  - [ ] Improve form structure
+  - [ ] Add staticman
