@@ -40,9 +40,14 @@ main.page-content {
   z-index: 4;
   // border-bottom: 1px solid rgba(0, 0, 0, 0.12);
   background-color: #fff;
-  background-color: var(--mdc-theme-primary #fff);
+  background-color: var(--mdc-theme-primary);
+  --mdc-theme-primary: #fff;
   color: var(--mdc-theme-text-primary-on-light);
   --mdc-theme-text-primary-on-primary: var(--mdc-theme-text-primary-on-light);
+  .mdc-button {
+    color: var(--mdc-theme-primary);
+    --mdc-theme-primary: #6200ee;
+  }
 }
 
 .mdc-drawer__toolbar-spacer,
@@ -121,14 +126,15 @@ article.post {
     position: relative;
     padding: 2rem 4rem;
     background-color: #b37eff;
-    background-color: var(--mdc-theme-primary-light);
+    background-color: var(--mdc-theme--primary-light);
+    --mdc-theme--primary-light: #b37eff;
     .mdc-typography--headline {
       color: rgba(0, 0, 0, 0.87);
-      color: var(--mdc-theme-text-primary-on-primary-light);
+      color: var(--mdc-theme-text-primary-on-background);
     }
     .mdc-typography--subheading1, .mdc-typography--subheading2 {
       color: rgba(0, 0, 0, 0.54);
-      color: var(--mdc-theme-text-secondary-on-primary-light);
+      color: var(--mdc-theme-text-secondary-on-background);
     }
     .mdc-fab {
       position: absolute;
