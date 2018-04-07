@@ -54,8 +54,16 @@
     margin: 3cm;
   }
 
-  a:after {
-	   content: " <" attr(href) "> ";
+  a {
+    color: #662222;
   }
 
+  a:after {
+	  content: " <" attr(href) "> ";
+  }
+
+  b, strong {
+    font-weight: 500;
+  }
+  
 }
