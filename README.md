@@ -16,6 +16,7 @@ Developed by a core team of engineers and UX designers at Google, these componen
 
 **[Demos](https://material-components-web.appspot.com/)** (updated with every release)
 
+**WATCH FOR BREAKING CHANGES**
 
 ---
 TODO:

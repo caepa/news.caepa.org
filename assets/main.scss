@@ -1,5 +1,14 @@
 ---
 ---
+:root {
+  --mdc-theme-primary: #662222;
+  --mdc-theme-secondary: #424242;
+}
+
+b, strong {
+  font-weight: 500;
+}
+
 html {
   height: 100%;
 }
@@ -14,8 +23,14 @@ body {
   width: 100%;
 }
 
-body.mdc-typography {
-  color: var(--mdc-theme-text-primary-on-light);
+body {
+  background-color: rgba(66,66,66,0.01);
+  & [hero] {
+    background-color: rgba(66,66,66,0.09);
+  }
+  &.mdc-typography {
+    color: var(--mdc-theme-text-primary-on-background);
+  }
 }
 
 main.page-content {
@@ -38,15 +53,10 @@ main.page-content {
   top: 0;
   left: 0;
   z-index: 4;
-  // border-bottom: 1px solid rgba(0, 0, 0, 0.12);
-  background-color: #fff;
-  background-color: var(--mdc-theme-primary);
-  --mdc-theme-primary: #fff;
-  color: var(--mdc-theme-text-primary-on-light);
-  --mdc-theme-text-primary-on-primary: var(--mdc-theme-text-primary-on-light);
-  .mdc-button {
-    color: var(--mdc-theme-primary);
-    --mdc-theme-primary: #6200ee;
+  background-color: var(--mdc-theme-background);
+  color: var(--mdc-theme-text-primary-on-background);
+  & .mdc-top-app-bar__action-item, .mdc-top-app-bar__navigation-icon {
+    color: var(--mdc-theme-text-primary-on-background);
   }
 }
 
@@ -64,12 +74,7 @@ main.page-content {
 
 .mdc-menu a {
   text-decoration: none;
-  color: rgba(0, 0, 0, 0.54);
-  color: var(--mdc-theme-text-secondary-on-background);
-}
-
-[hero] {
-  background-color: rgba(0, 0, 0, 0.12);
+  color: var(--mdc-theme-text-primary-on-background);
 }
 
 // tablet breakpoint and less than
@@ -120,36 +125,30 @@ main.page-content {
   }
 }
 
-/* under review */
+/* Watch for breaking changes */
+form {
+  font-size: initial;
+}
 article.post {
   .post-header {
     position: relative;
     padding: 2rem 4rem;
-    background-color: #b37eff;
-    background-color: var(--mdc-theme--primary-light);
-    --mdc-theme--primary-light: #b37eff;
+    background-color: var(--mdc-theme-primary);
     .mdc-typography--headline {
-      color: rgba(0, 0, 0, 0.87);
-      color: var(--mdc-theme-text-primary-on-background);
+      color: var(--mdc-theme-text-primary-on-primary);
     }
     .mdc-typography--subheading1, .mdc-typography--subheading2 {
-      color: rgba(0, 0, 0, 0.54);
-      color: var(--mdc-theme-text-secondary-on-background);
+      color: var(--mdc-theme-text-secondary-on-primary);
     }
     .mdc-fab {
       position: absolute;
       right: 25px;
-      background-color: #fff;
-      background-color: var(--mdc-theme-background);
-      color: rgba(0, 0, 0, 0.38);
-      color: var(--mdc-theme-text-icon-on-background);
     }
   }
   .post-content {
     padding: 2rem 4rem 5rem;
     line-height: 1.58rem;
     a {
-      color: #6200ee;
       color: var(--mdc-theme-primary);
     }
     hr {
