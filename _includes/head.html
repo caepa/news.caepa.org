@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="{{ "/assets/main.css" | absolute_url }}" type="text/css" media="screen">
   <link rel="stylesheet" href="{{ "/assets/print.css" | absolute_url }}" type="text/css" media="print">
   {%- feed_meta -%}
-  {%- if page.url == "/contribute" -%}
+  {%- if page.url == "/contribute" or page.url == "/subscribe" -%}
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <script>
    function onSubmit(token) {
