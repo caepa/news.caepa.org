@@ -11,6 +11,10 @@ posts:
   # not here is part of the request, an error will be thrown.
   allowedFields: ["title", "article", "author", "email"]
 
+  # When allowedOrigins is defined, only requests sent from one of the domains
+  # listed will be accepted.
+  allowedOrigins: ["localhost", "news.caepa.org"]
+
   # (*) REQUIRED
   #
   # Name of the branch being used. Must match the one sent in the URL of the
@@ -18,12 +22,12 @@ posts:
   branch: "master"
 
   # Text to use as the commit message or pull request title. Accepts placeholders.
-  commitMessage: "New contributor article from {fields.author}"
+  commitMessage: "Contributor article, '{fields.title}'"
 
   # (*) REQUIRED
   #
   # Destination path (filename) for the data files. Accepts placeholders.
-  filename: "{@date:YYYY-MM-DD}-{options.slug}"
+  filename: "{@date:YYYY-MM-DD}-{fields.d}"
 
   # The format of the generated data files. Accepted values are "json", "yaml"
   # or "frontmatter"
@@ -77,10 +81,9 @@ posts:
   # the name of the field and values are possible transformation types.
   transforms:
     article: frontmatterContent
-    email: md5
 
   # reCaptcha (!) ENCRYPTED
   reCaptcha:
-    enabled: false
+    enabled: true
     siteKey: "6Ld6x1EUAAAAACz3jturPJf2xDBa8jy-aZCxPzEW"
     secret: "B/l1AS3JUZPaAohFvCiNJkxU/YMy7psdeYJ9zQzpTia3IWXxqiQwA8tipSYeLBPJmbf4lSAYHydoDC0N5mkaeNZGEsTegWZssM+sr8sIf4t/U1rcBfnncqQZjLGNAxH7WpBFD05ckAJRXz8XOP7hSwOLJCYdcZ75U8rXCZHulb0="
