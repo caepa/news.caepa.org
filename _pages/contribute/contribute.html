@@ -1,0 +1,66 @@
+---
+layout: page
+permalink: /contribute
+title: Contribute to news.caepa.org
+---
+<style>
+  form section .mdc-text-field { width: 100%; }
+  form section { padding-top: 1rem; }
+</style>
+<form id="contribute-form" method="post" action="https://api.staticman.net/v2/entry/caepa/news.caepa.org/master/posts" aria-hidden="true">
+  <input name="options[redirect]" type="hidden" value="{{ site.url }}/contribute/thank-you">
+
+  <section>
+    <div class="mdc-text-field mdc-text-field--outlined" data-mdc-auto-init="MDCTextField" >
+      <input class="mdc-text-field__input" type="text" aria-label="Enter article title" name="fields[title]" required>
+      <label for="author" class="mdc-floating-label">Article title</label>
+      <div class="mdc-notched-outline">
+        <svg>
+        <path class="mdc-notched-outline__path"/>
+      </svg>
+      </div>
+      <div class="mdc-notched-outline__idle"></div>
+    </div>
+
+    <div class="mdc-text-field mdc-text-field--textarea" data-mdc-auto-init="MDCTextField" >
+      <textarea id="textarea" class="mdc-text-field__input" rows="8" cols="40" aria-label="Enter article text" name="fields[article]" required></textarea>
+      <label for="textarea" class="mdc-floating-label">Article text</label>
+    </div>
+    <p class="mdc-text-field-helper-text mdc-text-field-helper-text--persistent">Markdown is a way to style text on the web. See:
+      <a href="https://guides.github.com/features/mastering-markdown/" target="_blank" aria-hidden="true">Mastering Markdown</a>
+    </p>
+  </section>
+
+  <section>
+    <div class="mdc-text-field mdc-text-field--outlined" data-mdc-auto-init="MDCTextField" >
+      <input type="text" id="author" class="mdc-text-field__input" aria-controls="Enter contributor's name" name="fields[author]" required>
+      <label for="author" class="mdc-floating-label">Contributor's name</label>
+      <div class="mdc-notched-outline">
+        <svg>
+        <path class="mdc-notched-outline__path"/>
+      </svg>
+      </div>
+      <div class="mdc-notched-outline__idle"></div>
+    </div>
+
+    <div class="mdc-text-field mdc-text-field--outlined" data-mdc-auto-init="MDCTextField" >
+      <input type="email" id="email" class="mdc-text-field__input" aria-controls="Enter contributor's email" name="fields[email]" required>
+      <label for="email" class="mdc-floating-label">Contributor's email</label>
+      <div class="mdc-notched-outline">
+        <svg>
+        <path class="mdc-notched-outline__path"/>
+      </svg>
+      </div>
+      <div class="mdc-notched-outline__idle"></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="mdc-card__actions">
+      <div class="mdc-card__action-icons">
+        <button type="submit" class="mdc-button mdc-button--raised g-recaptcha" data-sitekey="6Ld6x1EUAAAAACz3jturPJf2xDBa8jy-aZCxPzEW" data-callback="onSubmit" data-mdc-auto-init="MDCRipple">Contribute</button>
+      </div>
+    </div>
+  </section>
+
+</form>
