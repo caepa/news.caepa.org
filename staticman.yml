@@ -85,6 +85,7 @@ posts:
   # the name of the field and values are possible transformation types.
   transforms:
     article: frontmatterContent
+    email: false
 
   # reCaptcha (!) ENCRYPTED
   reCaptcha:
