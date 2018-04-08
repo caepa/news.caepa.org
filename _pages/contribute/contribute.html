@@ -7,8 +7,10 @@ title: Contribute to news.caepa.org
   form section .mdc-text-field { width: 100%; }
   form section { padding-top: 1rem; }
 </style>
-<form id="contribute-form" method="post" action="https://api.staticman.net/v2/entry/caepa/news.caepa.org/master/posts" aria-hidden="true">
-  <input name="options[redirect]" type="hidden" value="{{ site.url }}/contribute/thank-you">
+<form id="contribute-form" method="post" action="https://api.staticman.net/v2/entry/caepa/news.caepa.org/master/posts">
+  <input name="options[redirect]" type="hidden" value="{{ "contribute/thank-you" | absolute_url }}" aria-hidden="true">
+  <input type="hidden" name="options[reCaptcha][siteKey]" value="{{ site.reCaptcha.siteKey }}" aria-hidden="true">
+  <input type="hidden" name="options[reCaptcha][secret]" value="{{ site.reCaptcha.secret }}" aria-hidden="true">
 
   <section>
     <div class="mdc-text-field mdc-text-field--outlined" data-mdc-auto-init="MDCTextField" >
@@ -58,7 +60,7 @@ title: Contribute to news.caepa.org
   <section>
     <div class="mdc-card__actions">
       <div class="mdc-card__action-icons">
-        <button type="submit" class="mdc-button mdc-button--raised g-recaptcha" data-sitekey="6Ld6x1EUAAAAACz3jturPJf2xDBa8jy-aZCxPzEW" data-callback="onSubmit" data-mdc-auto-init="MDCRipple">Contribute</button>
+        <button type="submit" class="mdc-button mdc-button--raised g-recaptcha" data-sitekey="6Ld6x1EUAAAAACz3jturPJf2xDBa8jy-aZCxPzEW" data-mdc-auto-init="MDCRipple">Contribute</button>
       </div>
     </div>
   </section>

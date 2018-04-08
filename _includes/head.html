@@ -11,11 +11,6 @@
   {%- feed_meta -%}
   {%- if page.url == "/contribute" -%}
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-  <script>
-   function onSubmit(token) {
-     document.querySelector('form').submit();
-   }
-  </script>
   {%- endif -%}
   {%- if jekyll.environment == 'production' and site.google_analytics -%}
     {%- include google-analytics.html -%}
