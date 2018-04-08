@@ -18,7 +18,7 @@ posts:
   branch: "master"
 
   # Text to use as the commit message or pull request title. Accepts placeholders.
-  commitMessage: "New contributor article"
+  commitMessage: "New contributor article from {fields.author}"
 
   # (*) REQUIRED
   #
