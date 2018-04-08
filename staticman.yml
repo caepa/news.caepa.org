@@ -84,6 +84,6 @@ posts:
 
   # reCaptcha (!) ENCRYPTED
   reCaptcha:
-    enabled: true
+    enabled: false
     siteKey: "6Ld6x1EUAAAAACz3jturPJf2xDBa8jy-aZCxPzEW"
     secret: "B/l1AS3JUZPaAohFvCiNJkxU/YMy7psdeYJ9zQzpTia3IWXxqiQwA8tipSYeLBPJmbf4lSAYHydoDC0N5mkaeNZGEsTegWZssM+sr8sIf4t/U1rcBfnncqQZjLGNAxH7WpBFD05ckAJRXz8XOP7hSwOLJCYdcZ75U8rXCZHulb0="

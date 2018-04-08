@@ -12,8 +12,9 @@ title: Contribute to news.caepa.org
   <input type="hidden" name="options[slug]" value="{{ page.title | slugify }}" aria-hidden="true">
   <input type="hidden" name="options[origin]" value="{{ site.url }}" aria-hidden="true">
 
+  {% comment %}
   <input type="hidden" name="options[reCaptcha][siteKey]" value="{{ site.reCaptcha.siteKey }}" aria-hidden="true">
-  <input type="hidden" name="options[reCaptcha][secret]" value="{{ site.reCaptcha.secret }}" aria-hidden="true">
+  <input type="hidden" name="options[reCaptcha][secret]" value="{{ site.reCaptcha.secret }}" aria-hidden="true"> {% endcomment %}
 
   <section>
     <div class="mdc-text-field mdc-text-field--outlined" data-mdc-auto-init="MDCTextField" >
@@ -64,9 +65,10 @@ title: Contribute to news.caepa.org
     <div class="mdc-card__actions">
       <div class="mdc-card__action-icons">
 
+        {% comment %}
         <div class="g-recaptcha" data-sitekey="{{ site.reCaptcha.siteKey }}" data-size="invisible"></div>
-        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-        
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script> {% endcomment %}
+
         <button type="submit" class="mdc-button mdc-button--raised" data-mdc-auto-init="MDCRipple">Contribute</button>
       </div>
     </div>
