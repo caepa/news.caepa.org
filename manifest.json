@@ -1,0 +1,15 @@
+{
+  "short_name": "CAEPA",
+  "name": "Colorado Adult Education Professional Association",
+  "icons": [
+    {
+      "src": "assets/img/title.png",
+      "type": "image/png",
+      "sizes": "378x82"
+    }
+  ],
+  "start_url": "/?utm_source=homescreen",
+  "theme_color": "#ffffff",
+  "background-color": "rgba(66,66,66,0.09)",
+  "display": "standalone"
+}
