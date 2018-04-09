@@ -4,7 +4,7 @@
     <div class="mdc-drawer__content mdc-list-group">
       <nav class="mdc-list mdc-list--two-line">
         {%- for post in site.posts -%}
-        <a class="mdc-list-item mdc-ripple-surface {% if post.url == page.url %}mdc-list-item--selected{%- endif -%}" href="{{ post.url | relative_url }}" data-mdc-auto-init="MDCRipple">
+        <a class="mdc-list-item mdc-ripple-surface {% if post.url == page.url %}mdc-list-item--activated{%- endif -%}" href="{{ post.url | relative_url }}" data-mdc-auto-init="MDCRipple">
           <span class="mdc-list-item__text">
             {{ post.title | escape }}
             <span class="mdc-list-item__secondary-text">
@@ -26,7 +26,7 @@
     <div class="mdc-drawer__content mdc-list-group">
       <nav class="mdc-list mdc-list--two-line">
         {%- for post in site.posts -%}
-        <a class="mdc-list-item mdc-ripple-surface {% if post.url == page.url %}mdc-list-item--selected{%- endif -%}" href="{{ post.url | relative_url }}" data-mdc-auto-init="MDCRipple">
+        <a class="mdc-list-item mdc-ripple-surface {% if post.url == page.url %}mdc-list-item--activated{%- endif -%}" href="{{ post.url | relative_url }}" data-mdc-auto-init="MDCRipple">
           <span class="mdc-list-item__text">
             {{ post.title | escape }}
             <span class="mdc-list-item__secondary-text">
