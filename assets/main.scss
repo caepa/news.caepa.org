@@ -73,19 +73,15 @@ main.page-content {
   }
 }
 
-.mdc-menu a {
+.mdc-menu  a {
   text-decoration: none;
   color: var(--mdc-theme-text-primary-on-background);
 }
 
 // tablet breakpoint and less than
 @media only screen and (max-width: 599px) {
-  .mdc-top-app-bar {
-    height: 56px;
-    .mdc-button,
-    img {
-      display: none;
-    }
+  .mdc-top-app-bar img {
+    display: none;
   }
   [hero] {
     height: calc(50vh - 56px);
@@ -97,9 +93,6 @@ main.page-content {
 
 // tablet breakpoint and greater than
 @media only screen and (min-width: 600px) {
-  .mdc-top-app-bar {
-    height: 64px;
-  }
   [hero] {
     height: calc(50vh - 64px);
   }
@@ -113,6 +106,9 @@ main.page-content {
   .mdc-drawer--permanent {
     display: none;
   }
+  .mdc-top-app-bar  .mdc-button {
+    display: none;
+  }
 }
 
 // desktop breakpoint and greater than
@@ -123,6 +119,9 @@ main.page-content {
     &__navigation-icon {
       display: none;
     }
+  }
+  .mdc-menu #news-caepa-org-menu {
+    display: none;
   }
 }
 
@@ -151,6 +150,9 @@ article.post {
     line-height: 1.58rem;
     a {
       color: var(--mdc-theme-primary);
+      &.mdc-button.mdc-button--raised {
+        color: var(--mdc-theme-text-primary-on-primary);
+      }
     }
     hr {
       border: 1px solid rgba(0, 0, 0, 0.12);
