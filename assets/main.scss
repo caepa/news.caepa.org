@@ -134,11 +134,11 @@ article.post {
     position: relative;
     padding: 2rem 4rem;
     background-color: var(--mdc-theme-primary);
-    .mdc-typography--headline {
-      color: var(--mdc-theme-text-primary-on-primary);
+    .mdc-typography--headline4 {
+      color: var(--mdc-theme-text-primary-on-dark);
     }
-    .mdc-typography--subheading1, .mdc-typography--subheading2 {
-      color: var(--mdc-theme-text-secondary-on-primary);
+    .mdc-typography--subtitle1, .mdc-typography--subheading2 {
+      color: var(--mdc-theme-text-secondary-on-dark);
     }
     .mdc-fab {
       position: absolute;
@@ -151,7 +151,7 @@ article.post {
     a {
       color: var(--mdc-theme-primary);
       &.mdc-button.mdc-button--raised {
-        color: var(--mdc-theme-text-primary-on-primary);
+        color: var(--mdc-theme-text-primary-on-dark);
       }
     }
     hr {
@@ -174,6 +174,9 @@ article.post {
     }
     form {
       line-height: initial;
+      & .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {
+        color: var(--mdc-theme-primary); // remove in future version update
+      }
     }
   }
 }
