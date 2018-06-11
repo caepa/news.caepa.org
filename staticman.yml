@@ -42,13 +42,13 @@ posts:
       type: date
       options:
         format: iso8601
-    slug:
-      type: slugify
-      options:
-        field: title
-    category:
-      options:
-        field: checkbox-1
+    #slug:
+    #  type: slugify
+    #  options:
+    #    field: title
+    #category:
+    #  options:
+    #    field: checkbox-1
 
   # Whether entries need to be appproved before they are published to the main
   # branch. If set to `true`, a pull request will be created for your approval.
