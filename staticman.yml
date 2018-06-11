@@ -27,7 +27,7 @@ posts:
   # (*) REQUIRED
   #
   # Destination path (filename) for the data files. Accepts placeholders.
-  filename: "{@date:YYYY-MM-DD}-{fields.slug}"
+  filename: "{@date:YYYY-MM-DD}-{options.slug}"
 
   # The format of the generated data files. Accepted values are "json", "yaml"
   # or "frontmatter"
@@ -45,10 +45,10 @@ posts:
     slug:
       type: slugify
       options:
-        field: title
+        field: "title"
     category:
       options:
-        field: immediate-release
+        field: "checkbox-1"
 
   # Whether entries need to be appproved before they are published to the main
   # branch. If set to `true`, a pull request will be created for your approval.
@@ -88,7 +88,7 @@ posts:
   # the name of the field and values are possible transformation types.
   transforms:
     article: "frontmatterContent"
-    email: "md5"
+    # email: "md5"
 
   # reCaptcha (!) ENCRYPTED
   reCaptcha:
