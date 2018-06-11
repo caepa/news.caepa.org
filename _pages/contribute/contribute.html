@@ -3,7 +3,6 @@ layout: page
 permalink: /contribute
 title: Contribute to news.caepa.org
 ---
-{% comment %}
 <style>
   form section .mdc-text-field { width: 100%; }
   form section { padding-top: 1rem; }
@@ -17,6 +16,11 @@ title: Contribute to news.caepa.org
   <input type="hidden" name="options[reCaptcha][secret]" value="{{ site.reCaptcha.secret }}" aria-hidden="true"> {% endcomment %}
 
   <section>
+
+
+    This page is being updated... Please check again later.
+
+    {% comment %}
     <div class="mdc-text-field mdc-text-field--outlined" data-mdc-auto-init="MDCTextField" >
       <input class="mdc-text-field__input" type="text" aria-label="Enter article title" name="fields[title]" required>
       <label for="author" class="mdc-floating-label">Article title</label>
@@ -70,7 +74,6 @@ title: Contribute to news.caepa.org
       <label for="checkbox-1">Immediate Release</label>
     </div>
 
-    {% comment %}
     <div class="mdc-text-field mdc-text-field--outlined" data-mdc-auto-init="MDCTextField" >
       <input type="email" id="email" class="mdc-text-field__input" aria-controls="Enter contributor's email" name="fields[email]" required>
       <label for="email" class="mdc-floating-label">Contributor's email</label>
@@ -81,7 +84,6 @@ title: Contribute to news.caepa.org
       </div>
       <div class="mdc-notched-outline__idle"></div>
     </div>
-    {% endcomment %}
 
   </section>
 
@@ -98,7 +100,6 @@ title: Contribute to news.caepa.org
     </div>
   </section>
 
-</form>
-{% endcomment %}
+  {% endcomment %}
 
-This page is being updated...
+</form>
