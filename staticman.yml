@@ -40,8 +40,8 @@ posts:
   generatedFields:
     slug:
       type: slugify
-      options:
-        field: title
+    category:
+      type: slugify
 
   # Whether entries need to be appproved before they are published to the main
   # branch. If set to `true`, a pull request will be created for your approval.
@@ -81,7 +81,7 @@ posts:
   # the name of the field and values are possible transformation types.
   transforms:
     article: "frontmatterContent"
-    email: false
+    email: "md5"
 
   # reCaptcha (!) ENCRYPTED
   reCaptcha:
