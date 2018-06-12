@@ -7,7 +7,7 @@ title: Contribute to news.caepa.org
   form section .mdc-text-field { width: 100%; }
   form section { padding-top: 1rem; }
 </style>
-<form method="POST" action="https://api.staticman.net/v2/entry/caepa/news.caepa.org/master/posts">
+<form method="POST" action="https://dev.staticman.net/v2/entry/caepa/news.caepa.org/master/posts">
   <input type="hidden" name="options[redirect]" value="{{ "contribute/thank-you" | absolute_url }}" aria-hidden="true">
   <input type="hidden" name="options[origin]" value="{{ site.url }}" aria-hidden="true">
 
@@ -48,28 +48,6 @@ title: Contribute to news.caepa.org
       <div class="mdc-notched-outline__idle"></div>
     </div>
 
-    <div class="mdc-form-field">
-      <div class="mdc-checkbox">
-        <input type="checkbox"
-               class="mdc-checkbox__native-control"
-               id="checkbox-1"
-               name="fields[checkbox-1]"
-               value="immediate-release"/>
-        <div class="mdc-checkbox__background">
-          <svg class="mdc-checkbox__checkmark"
-               viewBox="0 0 24 24">
-            <path class="mdc-checkbox__checkmark-path"
-                  fill="none"
-                  stroke="white"
-                  d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
-          </svg>
-          <div class="mdc-checkbox__mixedmark"></div>
-        </div>
-      </div>
-      <label for="checkbox-1">Immediate Release</label>
-    </div>
-
-    {% comment %}
     <div class="mdc-text-field mdc-text-field--outlined" data-mdc-auto-init="MDCTextField" >
       <input type="email" id="email" class="mdc-text-field__input" aria-controls="Enter contributor's email" name="fields[email]" required>
       <label for="email" class="mdc-floating-label">Contributor's email</label>
@@ -80,8 +58,6 @@ title: Contribute to news.caepa.org
       </div>
       <div class="mdc-notched-outline__idle"></div>
     </div>
-    {% endcomment %}
-
   </section>
 
   <section>
