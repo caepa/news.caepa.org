@@ -7,7 +7,7 @@ title: Contribute to news.caepa.org
   form section .mdc-text-field { width: 100%; }
   form section { padding-top: 1rem; }
 </style>
-<form method="POST" action="https://api.staticman.net/v2/entry/caepa/news.caepa.org/master/posts">
+<form method="POST" action="https://dev.staticman.net/v2/entry/caepa/news.caepa.org/master/posts">
   <input type="hidden" name="options[redirect]" value="{{ "contribute/thank-you" | absolute_url }}" aria-hidden="true">
   <input type="hidden" name="options[origin]" value="{{ site.url }}" aria-hidden="true">
   <!--input type="hidden" name="options[slug]" value="{{  }}" aria-hidden="true"-->
@@ -57,7 +57,7 @@ title: Contribute to news.caepa.org
         <input type="checkbox"
                class="mdc-checkbox__native-control"
                id="checkbox-1"
-               name="fields[category]"
+               name="fields[checkbox-1]"
                value="immediate-release"/>
         <div class="mdc-checkbox__background">
           <svg class="mdc-checkbox__checkmark"

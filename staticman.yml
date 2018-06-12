@@ -9,7 +9,7 @@ posts:
   #
   # Names of the fields the form is allowed to submit. If a field that is
   # not here is part of the request, an error will be thrown.
-  allowedFields: ["title", "article", "author", "category"]
+  allowedFields: ["title", "article", "author", "checkbox-1"]
 
   # When allowedOrigins is defined, only requests sent from one of the domains
   # listed will be accepted.
@@ -27,7 +27,7 @@ posts:
   # (*) REQUIRED
   #
   # Destination path (filename) for the data files. Accepts placeholders.
-  filename: "{@date:YYYY-MM-DD}-{fields.slug}"
+  filename: "{@date:YYYY-MM-DD}-{fields.title}"
 
   # The format of the generated data files. Accepted values are "json", "yaml"
   # or "frontmatter"
