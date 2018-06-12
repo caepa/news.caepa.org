@@ -9,7 +9,7 @@ posts:
   #
   # Names of the fields the form is allowed to submit. If a field that is
   # not here is part of the request, an error will be thrown.
-  allowedFields: ["title", "article", "author", "tags"]
+  allowedFields: ["title", "article", "author", "category"]
 
   # When allowedOrigins is defined, only requests sent from one of the domains
   # listed will be accepted.
@@ -42,10 +42,10 @@ posts:
       type: date
       options:
         format: "iso8601"
-    slug:
-      type: slugify
-      options:
-        field: title
+    #slug:
+    #  type: slugify
+    #  options:
+    #    field: title
 
   # Whether entries need to be appproved before they are published to the main
   # branch. If set to `true`, a pull request will be created for your approval.

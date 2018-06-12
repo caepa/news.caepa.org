@@ -10,7 +10,7 @@ title: Contribute to news.caepa.org
 <form method="POST" action="https://dev.staticman.net/v2/entry/caepa/news.caepa.org/master/posts">
   <input type="hidden" name="options[redirect]" value="{{ "contribute/thank-you" | absolute_url }}" aria-hidden="true">
   <input type="hidden" name="options[origin]" value="{{ site.url }}" aria-hidden="true">
-  <!--input type="hidden" name="options[slug]" value="{{  }}" aria-hidden="true"-->
+  <input type="hidden" name="options[category]" value="immediate-release" aria-hidden="true">
 
   {% comment %}
   <input type="hidden" name="options[reCaptcha][siteKey]" value="{{ site.reCaptcha.siteKey }}" aria-hidden="true">
@@ -52,7 +52,7 @@ title: Contribute to news.caepa.org
       <div class="mdc-notched-outline__idle"></div>
     </div>
 
-    <div class="mdc-form-field">
+    <!--div class="mdc-form-field">
       <div class="mdc-checkbox">
         <input type="checkbox"
                class="mdc-checkbox__native-control"
@@ -71,7 +71,7 @@ title: Contribute to news.caepa.org
         </div>
       </div>
       <label for="checkbox-1">Immediate Release</label>
-    </div>
+    </div-->
 
     {% comment %} <!-- remove email temporarily
     <div class="mdc-text-field mdc-text-field--outlined" data-mdc-auto-init="MDCTextField" >
