@@ -11,9 +11,10 @@ title: Contribute to news.caepa.org
   <input type="hidden" name="options[redirect]" value="{{ "contribute/thank-you" | absolute_url }}" aria-hidden="true">
   <input type="hidden" name="options[origin]" value="{{ site.url }}" aria-hidden="true">
 
-  {% comment %}
+  {% comment %} <!-- reCaptcha disabled -->
   <input type="hidden" name="options[reCaptcha][siteKey]" value="{{ site.reCaptcha.siteKey }}" aria-hidden="true">
-  <input type="hidden" name="options[reCaptcha][secret]" value="{{ site.reCaptcha.secret }}" aria-hidden="true"> {% endcomment %}
+  <input type="hidden" name="options[reCaptcha][secret]" value="{{ site.reCaptcha.secret }}" aria-hidden="true">
+  {% endcomment %}
 
   <section>
     <div class="mdc-text-field mdc-text-field--outlined" data-mdc-auto-init="MDCTextField" >
@@ -48,6 +49,7 @@ title: Contribute to news.caepa.org
       <div class="mdc-notched-outline__idle"></div>
     </div>
 
+    {% comment %} <!-- remove email temporarily -->
     <div class="mdc-text-field mdc-text-field--outlined" data-mdc-auto-init="MDCTextField" >
       <input type="email" id="email" class="mdc-text-field__input" aria-controls="Enter contributor's email" name="fields[email]" required>
       <label for="email" class="mdc-floating-label">Contributor's email</label>
@@ -58,6 +60,7 @@ title: Contribute to news.caepa.org
       </div>
       <div class="mdc-notched-outline__idle"></div>
     </div>
+    {% endcomment %}
   </section>
 
   <section>
