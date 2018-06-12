@@ -39,9 +39,13 @@ posts:
   # to be used directly (e.g. a string, number or array)
   generatedFields:
     slug:
-      type: slugify
+      type: "slugify"
+      options:
+        field: "title"
     category:
-      type: slugify
+      type: "slugify"
+      options:
+        field: "category"
 
   # Whether entries need to be appproved before they are published to the main
   # branch. If set to `true`, a pull request will be created for your approval.
