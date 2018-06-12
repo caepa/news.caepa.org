@@ -27,7 +27,7 @@ posts:
   # (*) REQUIRED
   #
   # Destination path (filename) for the data files. Accepts placeholders.
-  filename: "{@date:YYYY-MM-DD}-{@slug}"
+  filename: "{@date:YYYY-MM-DD}-{fields.slug}"
 
   # The format of the generated data files. Accepted values are "json", "yaml"
   # or "frontmatter"
@@ -42,7 +42,10 @@ posts:
       type: date
       options:
         format: "iso8601"
-    category: test
+    slug:
+      type: slugify
+      options:
+        field: title
 
   # Whether entries need to be appproved before they are published to the main
   # branch. If set to `true`, a pull request will be created for your approval.
