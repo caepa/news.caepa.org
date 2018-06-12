@@ -45,11 +45,11 @@ posts:
     slug:
       type: slugify
       options:
-        field: "title"
+        field: title
     category:
       type: slugify
       options:
-        field: "category"
+        field: category
 
   # Whether entries need to be appproved before they are published to the main
   # branch. If set to `true`, a pull request will be created for your approval.
