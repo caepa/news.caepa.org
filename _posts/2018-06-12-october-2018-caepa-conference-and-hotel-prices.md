@@ -17,7 +17,7 @@ CAEPA is holding:
 
 Room rates and continental breakfasts are $118 a night when you mention the CAEPA conference.
 
-Registration to CAEPA is $ 175 for the two days. If you attended the Mini CAEPA conference, registration will be $125, snack and lunch are included with all registrations.
+Registration to CAEPA is $175 for the two days. If you attended the Mini CAEPA conference, registration will be $125, snack and lunch are included with all registrations.
 
 This will be an exciting Conference with four very talented and connected keynote speakers. Register early. More updates to come.
 
