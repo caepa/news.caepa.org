@@ -12,8 +12,8 @@ This is to help Directors budget for the year.
 
 CAEPA is holding:
 
-	*	CAEPA Conference Monday, October 22, 2018 through Wednesday, October 24, 2018 at the Doubletree in Westminster Colorado
-	*	CAEPA Pre-Conference Session: Adult Education Ambassadors Train the Trainer on Monday, October 22, 2018
+  * CAEPA Conference Monday, October 22, 2018 through Wednesday, October 24, 2018 at the Doubletree in Westminster Colorado
+  * CAEPA Pre-Conference Session: Adult Education Ambassadors Train the Trainer on Monday, October 22, 2018
 
 Room rates and continental breakfasts are $118 a night when you mention the CAEPA conference.
 
