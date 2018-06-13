@@ -1,9 +1,10 @@
 ---
 _id: 8571c860-6e91-11e8-bb3b-452f5e1bbd2c
-title: October 2018 CAEPA conference and hotel prices.
+title: October 2018 CAEPA conference and hotel prices
 author: George O'Clair
 date: '2018-06-12T22:39:52.409Z'
 slug: october-2018-caepa-conference-and-hotel-prices
+category: immediate-release
 ---
 Hello CAEPA members,
 
