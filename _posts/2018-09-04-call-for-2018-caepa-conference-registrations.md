@@ -20,8 +20,8 @@ Included with Registration
 Cost
 
 * $175.00 General registration
-* $150.00 Discount for mini-conference attendees
-* $125.00 Discount for presenters
+* $150.00 w/Presenter discount
+* $125.00 w/Mini-conference discount
 
 
 Payment will be requested after registration.
