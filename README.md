@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/caepa/news.caepa.org.svg?branch=master)](https://travis-ci.org/caepa/caepa.github.io)
+[![Build Status](https://travis-ci.org/caepa/news.caepa.org.svg?branch=master)](https://travis-ci.org/caepa/news.caepa.org)
 
 
 # news.caepa.org
