@@ -1,12 +1,11 @@
 ---
 _id: 20be5790-b797-11e8-89ed-0b5b740da84a
 title: >-
-  Call for 2018 CAEPA Conference registrations and deadline for proposals
-  extended.
+  Extended deadline: Call for 2018 CAEPA Conference Award Nominations, Registrations, Proposals, and more
 author: George O'Clair
 date: '2018-09-13T20:53:55.283Z'
 slug: >-
-  call-for-2018-caepa-conference-registrations-and-deadline-for-proposals-extended
+  extended-deadline-call-for-2018-caepa-conference
 ---
 **Register for the October CAEPA Rendezvous**
 
