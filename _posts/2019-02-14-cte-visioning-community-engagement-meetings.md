@@ -34,7 +34,7 @@ Know of others who may like to attend? Feel free to share this invitation.
 
 Once you RSVP, please check your spam filter if you don’t receive the confirmation from Eventbrite.
 
-Colorado Community College System \
-Career and Technical Education \
-9101 E. Lowry Boulevard \
+Colorado Community College System \\
+Career and Technical Education \\
+9101 E. Lowry Boulevard \\
 Denver, CO 80230
