@@ -7,7 +7,7 @@ The Office of Adult Education Initiatives is pleased to announce that we will be
   *   started working for an AEFLA-funded program on or before September 1st, 2017; or
   *   have already taken/submitted a portfolio for one or more of the ABEA EDU courses.
 
-AEI’s goal is that instructors who might otherwise become out of compliance with the ABEA Policy<http://www.cde.state.co.us/cdeadult/grantees/handbook/abea-policy> before the new set of ABEA modules are available will be able to complete their ABEA using the current requirements/portfolio process and thereby avoid any lapses in compliance.
+AEI’s goal is that instructors who might otherwise become out of compliance with the [ABEA Policy]<http://www.cde.state.co.us/cdeadult/grantees/handbook/abea-policy> before the new set of ABEA modules are available will be able to complete their ABEA using the current requirements/portfolio process and thereby avoid any lapses in compliance.
 
 As before, the course will be offered online, in a self-directed format. The course is organized around the existing [EDU-131 Course Competencies])http://www.cde.state.co.us/cdeadult/instructors/abea/handbook/edu-131) not the [new ABEA competencies](https://docs.google.com/document/d/1ODMtENZ8rK4jsWWDsEve-seRhJXXcrSA4ODHS48vMfE), and participants will be able to demonstrate mastery of each competency in a variety of ways. As such, time to completion will vary depending on prior knowledge/experience, but will be roughly equivalent to the traditional course. The course will launch on March 1st, and while the course is self-directed, it will close at the end of the current program year (June 30, 2019).
 
