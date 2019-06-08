@@ -1,7 +1,7 @@
 _site
-.bundle
-.sass-cache
-.jekyll-metadata
 .DS_Store
-Gemfile.lock
+.jekyll-metadata
+.sass-cache
+assets/docs/
 node_modules
+webpack.style-bundle.js

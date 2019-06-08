@@ -12,11 +12,34 @@ The Colorado Adult Education Professional Association, CAEPA, provides leadershi
 Built with Material Components for the web
 
 Material Components for the web (MDC Web) helps developers execute [Material Design](https://www.material.io).
-Developed by a core team of engineers and UX designers at Google, these components enable a reliable development workflow to build beautiful and functional web projects.
 
-**[Demos](https://material-components-web.appspot.com/)** (updated with every release)
+How-to update CSS `assets/css/main.css`
 
 **WATCH FOR BREAKING CHANGES**
+[CHANGELOG: material-components-web](https://github.com/material-components/material-components-web/blob/master/CHANGELOG.md)
+
+Check for outdated packages
+```
+npm update --save-dev
+npm outdated
+```
+
+Update material-components-web
+```
+npm install material-components-web@latest --save-dev
+npm start
+```
+
+Reset node_modules
+```
+rm -rf node_modules
+npm install --save-dev
+```
+
+Reset and install dependencies as specified in ```package-lock.json``` only
+```
+npm ci
+```
 
 ---
 TODO:
