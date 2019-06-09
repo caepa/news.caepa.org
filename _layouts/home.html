@@ -1,10 +1,36 @@
 ---
-layout: page
+layout: default
 ---
 
-{{ content }}
+<div class="home">
 
-<div class="mdc-card__actions">
-  <a href="{{ '/contribute' | absolute_url }}" class="mdc-button mdc-card__action mdc-card__action--button mdc-button">Contribute</a>
-  <a href="{{ '/subscribe' | absolute_url }}" class="mdc-button mdc-card__action mdc-card__action--button mdc-button">Subscribe</a>
+  {%- if page.title -%}
+  <h1 class="page-heading">{{ page.title }}</h1>
+  {%- endif -%}
+
+  {{ content }}
+
+  {%- if site.posts.size > 0 -%}
+  <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
+  <nav class="mdc-list mdc-list--two-line">
+
+    {%- for post in site.posts -%}
+    <a class="mdc-list-item" href="{{ post.url | relative_url }}" {%- if forloop.first -%} tabindex="0" {%- endif -%}>
+
+      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+      <span class="mdc-list-item__text">
+        <span class="mdc-list-item__primary-text">{{ post.title | escape }}</span>
+        <span class="mdc-list-item__secondary-text">{{ post.date | date: date_format }}</span>
+
+        {%- if site.show_excerpts -%}
+        {{ post.excerpt }}
+        {%- endif -%}
+
+      </span>
+    </a>
+    {%- endfor -%}
+
+  </nav>
+  {%- endif -%}
+
 </div>

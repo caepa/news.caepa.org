@@ -3,28 +3,17 @@
 
   {%- include head.html -%}
 
-  <body class="mdc-typography">
+  <body>
 
-    {%- include sidenav.html -%}
+    {%- include header.html -%}
 
-    <main class="page-content" aria-label="Content">
-
-      {%- include navbar.html -%}
-
-      <div hero class="mdc-layout-grid mdc-toolbar-fixed-adjust"></div>
+    <main class="mdc-top-app-bar--fixed-adjust" aria-label="Content">
       <section paper class="mdc-layout-grid">
         <div class="mdc-layout-grid__inner">
-          <div class="mdc-layout-grid__cell--span-2-desktop"></div>
-          <div class="mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-8-desktop">
-            <div class="mdc-card">
+          <div class="mdc-layout-grid__cell">
 
               {{ content }}
 
-            </div>
-            <div class="mdc-card__actions"> {%- if page.previous.url -%}
-              <a href="{{ page.previous.url }}" class="mdc-button mdc-card__action mdc-card__action--button">Previous</a> {%- endif -%} {%- if page.next.url -%}
-              <a href="{{ page.next.url }}" class="mdc-button mdc-card__action mdc-card__action--button">Next</a> {%- endif -%}
-            </div>
           </div>
         </div>
       </section>
