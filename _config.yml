@@ -25,8 +25,6 @@ repository: caepa/news.caepa.org
 author: CAEPA
 email: communications@caepa.org
 
-logo:
-
 google_analytics: UA-76548901-1
 google_site_verification: 9aWiSPXxIMqz4XsA1BbxONHgHSSVeTczQFS0fJcgEZE
 
@@ -54,7 +52,7 @@ social:
     - https://twitter.com/caepa_co
     - http://news.caepa.org/feed.xml
 
-show_excerpts: true # set to true to show excerpts on the homepage
+show_excerpts: false # set to true to show excerpts on the homepage
 
 # Minima date format
 # refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
@@ -65,12 +63,20 @@ minima:
 # If you want to link only specific pages in your header, uncomment
 # this and add the path to the pages in order as they should show up
 #header_pages:
-# - about.html
+# - about.
+
+
+# Collections
+collections_dir: collections
+
 
 # Front matter defaults
 defaults:
-  -
-    scope:
+  - scope:
+      path: ""
+    values:
+      image: /assets/img/caepa-title.svg
+  - scope:
       path: ""
       type: "posts"
     values:
@@ -85,16 +91,30 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
+feed:
+  categories:
+    - news
+    - events
+    - updates
 
 exclude:
-  - node_modules
+  - CNAME
   - Gemfile
   - Gemfile.lock
+  - node_modules
+  - package-lock.json
+  - package.json
+  - README.md
+  - staticman.yml
+  - webpack.config.js
+  - webpack.style-bundle.js
 include:
   - _pages
 sass:
   load_paths:
     - assets
+  style: compressed
+
 
 # reCaptcha (!) ENCRYPTED
 reCaptcha:
