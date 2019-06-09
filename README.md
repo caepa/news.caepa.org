@@ -24,9 +24,10 @@ npm update --save-dev
 npm outdated
 ```
 
-Update material-components-web
+Update CSS packages
 ```
-npm install material-components-web@latest --save-dev
+npm install normalize-scss@latest --save &&
+npm install material-components-web@latest --save &&
 npm start
 ```
 
