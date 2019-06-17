@@ -1,14 +1,29 @@
+// normalize variables
+$base-font-size: 16px;
+$base-line-height: 28px;
+$base-font-family: unquote("-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Helvetica Neue, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol");
+
+// primer variables
+$body-font: $base-font-family;
+
 // mdc variables
 $mdc-theme-primary: #662222;
 $mdc-theme-secondary: #424242;
 $mdc-theme-tertiary: #CC9933;
 
+$mdc-typography-font-family: $base-font-family;
 
-// normalize variables
-$base-font-size: 16px;
-$base-line-height: 22px;
-$base-font-family: unquote("-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Helvetica Neue, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol");
+a {
+  color: $mdc-theme-primary;
+  font-weight: bold;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
 
 @charset "UTF-8";
 @import "normalize-scss/sass/normalize/import-now";
+@import "@primer/css/markdown/index.scss";
 @import "material-web-components";
