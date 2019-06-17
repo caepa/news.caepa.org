@@ -10,18 +10,19 @@
   "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^9.5.1",
-    "css-loader": "^2.1.1",
+    "css-loader": "^3.0.0",
     "fibers": "^4.0.1",
     "mini-css-extract-plugin": "^0.7.0",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
     "postcss-loader": "^3.0.0",
     "sass": "^1.18.0",
     "sass-loader": "^7.1.0",
-    "webpack": "^4.30.0",
-    "webpack-cli": "^3.3.0"
+    "webpack": "^4.34.0",
+    "webpack-cli": "^3.3.4"
   },
   "dependencies": {
-    "material-components-web": "^2.3.0",
+    "@primer/css": "^12.4.0",
+    "material-components-web": "^2.3.1",
     "normalize-scss": "^7.0.1"
   }
 }
