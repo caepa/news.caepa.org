@@ -18,17 +18,26 @@ How-to update CSS `assets/css/main.css`
 **WATCH FOR BREAKING CHANGES**
 [CHANGELOG: material-components-web](https://github.com/material-components/material-components-web/blob/master/CHANGELOG.md)
 
-Check for outdated packages
+Check for outdated packages and update
 ```
-npm update --save-dev
 npm outdated
+npm update --save-dev
 ```
 
 Update CSS packages
 ```
 npm install normalize-scss@latest --save &&
-npm install material-components-web@latest --save &&
-npm start
+npm install material-components-web@latest --save
+```
+
+Reset and install dependencies as specified in ```package-lock.json``` only
+```
+npm ci
+```
+
+Run ```webpack.config.js``` to rebuild ```main.css```
+```
+npm restart
 ```
 
 Reset node_modules
@@ -37,10 +46,6 @@ rm -rf node_modules
 npm install --save-dev
 ```
 
-Reset and install dependencies as specified in ```package-lock.json``` only
-```
-npm ci
-```
 
 ---
 TODO:
