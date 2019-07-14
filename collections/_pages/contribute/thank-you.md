@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /contribute/thank-you
-title: Thank you for contributing
+title: Thank you
 ---
 Your article will be reviewed before being made openly public... Once accepted, your article will be distributed via CAEPA's subscription list.
 

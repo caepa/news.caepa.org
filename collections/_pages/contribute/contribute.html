@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /contribute
-title: Contribute to news.caepa.org
+title: Contribute
 ---
 <style>
   form section .mdc-text-field { width: 100%; }
@@ -18,47 +18,65 @@ title: Contribute to news.caepa.org
 
   <section>
     <div class="mdc-text-field mdc-text-field--outlined" data-mdc-auto-init="MDCTextField" >
-      <input class="mdc-text-field__input" type="text" aria-label="Enter article title" name="fields[title]" required>
-      <label for="author" class="mdc-floating-label">Article title</label>
+      <input class="mdc-text-field__input" id="title" type="text" aria-label="Enter article title" name="fields[title]" required>
       <div class="mdc-notched-outline">
-        <svg>
-        <path class="mdc-notched-outline__path"/>
-      </svg>
+        <div class="mdc-notched-outline__leading"></div>
+        <div class="mdc-notched-outline__notch">
+          <label class="mdc-floating-label" for="title">Article title</label>
+        </div>
+        <div class="mdc-notched-outline__trailing"></div>
       </div>
-      <div class="mdc-notched-outline__idle"></div>
     </div>
+    <div class="mdc-text-field-helper-line">
+      <div class="mdc-text-field-helper-text">*Required</div>
+    </div>
+  </section>
 
+  <section>
     <div class="mdc-text-field mdc-text-field--textarea" data-mdc-auto-init="MDCTextField" >
-      <textarea id="textarea" class="mdc-text-field__input" rows="8" cols="40" aria-label="Enter article text" name="fields[article]" required></textarea>
-      <label for="textarea" class="mdc-floating-label">Article text</label>
+      <textarea class="mdc-text-field__input" id="textarea" rows="8" cols="40" aria-label="Enter article text" name="fields[article]" required></textarea>
+      <div class="mdc-notched-outline">
+        <div class="mdc-notched-outline__leading"></div>
+        <div class="mdc-notched-outline__notch">
+          <label class="mdc-floating-label" for="textarea">Article text</label>
+        </div>
+        <div class="mdc-notched-outline__trailing"></div>
+      </div>
     </div>
-    <p class="mdc-text-field-helper-text mdc-text-field-helper-text--persistent">Markdown is a way to style text on the web. See:
-      <a href="https://guides.github.com/features/mastering-markdown/" target="_blank" aria-hidden="true">Mastering Markdown</a>
-    </p>
+    <div class="mdc-text-field-helper-line">
+      <div class="mdc-text-field-helper-text">*Required, Markdown is a way to style text on the web. See: <a href="https://guides.github.com/features/mastering-markdown/" target="_blank" aria-hidden="true">Mastering Markdown</a>
+      </div>
+    </div>
   </section>
 
   <section>
     <div class="mdc-text-field mdc-text-field--outlined" data-mdc-auto-init="MDCTextField" >
       <input type="text" id="author" class="mdc-text-field__input" aria-controls="Enter contributor's name" name="fields[author]" required>
-      <label for="author" class="mdc-floating-label">Contributor's name</label>
       <div class="mdc-notched-outline">
-        <svg>
-        <path class="mdc-notched-outline__path"/>
-      </svg>
+        <div class="mdc-notched-outline__leading"></div>
+        <div class="mdc-notched-outline__notch">
+          <label class="mdc-floating-label" for="author">Contributor's name</label>
+        </div>
+        <div class="mdc-notched-outline__trailing"></div>
       </div>
-      <div class="mdc-notched-outline__idle"></div>
+    </div>
+    <div class="mdc-text-field-helper-line">
+      <div class="mdc-text-field-helper-text">*Required</div>
     </div>
 
     {% comment %} <!-- remove email temporarily -->
     <div class="mdc-text-field mdc-text-field--outlined" data-mdc-auto-init="MDCTextField" >
       <input type="email" id="email" class="mdc-text-field__input" aria-controls="Enter contributor's email" name="fields[email]" required>
-      <label for="email" class="mdc-floating-label">Contributor's email</label>
       <div class="mdc-notched-outline">
-        <svg>
-        <path class="mdc-notched-outline__path"/>
-      </svg>
+        <div class="mdc-notched-outline__leading"></div>
+        <div class="mdc-notched-outline__notch">
+          <label class="mdc-floating-label" for="email">Contributor's email</label>
+        </div>
+        <div class="mdc-notched-outline__trailing"></div>
       </div>
-      <div class="mdc-notched-outline__idle"></div>
+    </div>
+    <div class="mdc-text-field-helper-line">
+      <div class="mdc-text-field-helper-text">*Required</div>
     </div>
     {% endcomment %}
   </section>
