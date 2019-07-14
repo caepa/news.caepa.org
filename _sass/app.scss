@@ -63,6 +63,24 @@ blockquote {
   border-left: 2px solid $mdc-theme-primary;
 }
 
+dl {
+  margin: 1.5em 0;
+  display: grid;
+  grid-template: auto / 0.5fr 1fr;
+  & dt {
+    grid-column: 1;
+    font-weight: bold;
+  }
+  & dd {
+    margin: 0 0 0 1.5em;
+    grid-column: 2;
+    & + dt,
+    & + dt + dd {
+      margin-top: 1.5em;
+    }
+  }
+}
+
 /////
 .mdc-layout-grid__cell--span-6-desktop {
   display: flex;
