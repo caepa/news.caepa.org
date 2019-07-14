@@ -3,14 +3,16 @@
 
   {%- include head.html -%}
 
-  <body>
+  <body class="mdc-typography">
 
-    {%- include header.html -%}
+    {%- include mdc-top-app-bar.html -%}
+
+    {%- include mdc-drawer.html -%}
 
     <main class="mdc-top-app-bar--fixed-adjust" aria-label="Content">
-      <section paper class="mdc-layout-grid">
+      <section class="mdc-layout-grid">
         <div class="mdc-layout-grid__inner">
-          <div class="mdc-layout-grid__cell">
+          <div class="mdc-layout-grid__cell--span-12">
 
               {{ content }}
 

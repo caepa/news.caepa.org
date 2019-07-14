@@ -1,0 +1,32 @@
+[
+  {
+    "icon": "assignment",
+    "url": "http://www.caepa.org/bylaws",
+    "title": "CAEPA Bylaws",
+  },
+  {
+    "icon": "info",
+    "url": "http://www.caepa.org/factsheets",
+    "title": "Factsheets",
+  },
+  {
+    "icon": "description",
+    "url": "http://www.caepa.org/forms",
+    "title": "Forms",
+  },
+  {
+    "icon": "chrome_reader_mode",
+    "url": "http://news.caepa.org",
+    "title": "News",
+  },
+  {
+    "icon": "event",
+    "url": "http://www.caepa.org/professional-learning",
+    "title": "Professional Learning",
+  },
+  {
+    "icon": "extension",
+    "url": "http://www.caepa.org/resources",
+    "title": "Resource Sharing",
+  }
+]

@@ -10,7 +10,9 @@
   aside.mdc-drawer,
   main[hero],
   .mdc-fab,
-  .mdc-card__actions {
+  .mdc-card__actions,
+  aside,
+  footer.site-footer {
     display: none;
   }
 
@@ -31,7 +33,7 @@
   }
 
   article:before {
-    content: url(http://news.caepa.org/assets/img/caepa-title.svg);
+    content: url(http://news.caepa.org/assets/img/caepa/caepa-title.svg);
     display:inline-block;
     width:2in;
   }

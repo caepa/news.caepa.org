@@ -1,25 +1,72 @@
+<footer class="site-footer" role="contentinfo">
+  <div class="mdc-layout-grid">
+    <div class="mdc-layout-grid__inner">
+      <div class="mdc-layout-grid__cell--span-6-desktop
+                  mdc-layout-grid__cell--span-4-tablet
+                  mdc-layout-grid__cell--span-4-phone">
+        <div class="mdc-list-group">
+          <h2 class="mdc-list-group__subheader">Navigation</h2>
+          <nav class="mdc-list" role="listbox" data-mdc-auto-init="MDCList">
+
+            {%- for data in site.data.navigation -%}
+
+            <a class="mdc-list-item {%- if data.url == page.url -%} mdc-list-item--selected {%- endif -%}" href="{{ data.url }}" role="option" {%- if forloop.first -%} tabindex="0" {%- endif -%}>
+              <i class="material-icons mdc-list-item__graphic" aria-hidden="true">{{ data.icon }}</i>
+              <span class="mdc-list-item__text">{{ data.title }}</span>
+            </a>
+
+            {%- endfor -%}
+
+          </nav>
+        </div>
+      </div>
+      <div class="mdc-layout-grid__cell--span-6-desktop
+                    mdc-layout-grid__cell--span-4-tablet
+                    mdc-layout-grid__cell--span-4-phone">
+        <div class="mdc-list-group">
+          <h2 class="mdc-list-group__subheader">Social</h2>
+
+          {%- include social-icons.html -%}
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
 
 <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
 <!--script src="{{ "/assets/js/main.js" | relative_url }}"></script-->
 <script>
   window.mdc.autoInit();
 
-  var drawer = new mdc.drawer.MDCTemporaryDrawer(document.querySelector('.mdc-drawer--temporary'));
+  const drawer = new mdc.drawer.MDCDrawer(document.querySelector('.mdc-drawer--modal'));
   document.querySelector('.mdc-top-app-bar__navigation-icon').addEventListener('click', function(evt) {
     evt.preventDefault();
     drawer.open = true;
   });
 
-  var toolbar = mdc.topAppBar.MDCTopAppBar.attachTo(document.querySelector('.mdc-top-app-bar'));
-  toolbar.fixedAdjustElement = document.querySelector('.mdc-toolbar-fixed-adjust');
-
-  var menu = new mdc.menu.MDCMenu(document.querySelector('.mdc-menu'));
-  document.querySelector('#apps').addEventListener('click', function(evt) {
+  const menu = new mdc.menu.MDCMenu(document.querySelector('#navigation-menu'));
+  document.querySelector('#navigation-button').addEventListener('click', function(evt) {
     evt.preventDefault();
     menu.open = !menu.open;
+    menu.setAnchorCorner(mdc.menu.Corner.BOTTOM_LEFT);
   });
 
-  <!-- breaks out of scrollable element -->
-  var scroll = document.querySelector('.mdc-list-item--activated');
-  scroll.scrollIntoView({block:'center'});
+  //<!-- breaks out of scrollable element -->
+  //var scroll = document.querySelector('.mdc-list-item--activated');
+  //scroll.scrollIntoView({block:'center'});
 </script>
+
+
+<!--
+const buttonEl = document.querySelector('.mdc-button');
+const menuEl = document.querySelector('.mdc-menu');
+const menu = new mdc.menu.MDCMenu(menuEl);
+buttonEl.addEventListener('click', (event) => {
+  menu.open = !menu.open;
+  menu.setAnchorCorner(mdc.menu.Corner.BOTTOM_LEFT);
+  menu.setAnchorElement(buttonEl);
+});
+
+-->

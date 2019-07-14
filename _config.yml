@@ -52,7 +52,23 @@ social:
     - https://twitter.com/caepa_co
     - http://news.caepa.org/feed.xml
 
-show_excerpts: false # set to true to show excerpts on the homepage
+# social media buttons
+social_media:
+  # - name: dropbox
+  #   url:  http://dropbox.com
+  # - name: google-plus
+  #   url:  http://plus.google.com/caepaboard
+  - name: facebook
+    url:  https://www.facebook.com/caepa.co
+  - name: github
+    url:  http://github.com/caepa
+  - name: linkedin
+  #   url:  https://www.linkedin.com/company/caepa-co/
+    url:  https://www.linkedin.com/company/colorado-adult-education-professional-association-caepa- # inaccessible
+  - name: rss
+    url:  http://news.caepa.org/feed.xml
+  - name: twitter
+    url:  https://twitter.com/caepa_co
 
 # Minima date format
 # refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
@@ -75,7 +91,7 @@ defaults:
   - scope:
       path: ""
     values:
-      image: /assets/img/caepa-title.svg
+      image: /assets/img/caepa/icon.svg
   - scope:
       path: ""
       type: "posts"

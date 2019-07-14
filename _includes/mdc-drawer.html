@@ -1,0 +1,26 @@
+{%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+<aside class="mdc-drawer mdc-drawer--modal">
+  <div class="mdc-drawer__content">
+    <nav class="mdc-list mdc-list--two-line">
+
+      {%- for post in site.posts -%}
+      <a class="mdc-list-item mdc-list-item--activated" href="{{ post.url }}" aria-current="page">
+        <span class="mdc-list-item__text">
+          <span class="mdc-list-item__primary-text">{{ post.title | escape }}</span>
+          <span class="mdc-list-item__secondary-text">
+            <time>
+              {{ post.date | date: date_format }}
+            </time>
+            {%- if post.author -%}
+            • <span>{{ post.author | escape }}</span>
+            {%- endif -%}
+          </span>
+        </span>
+      </a>
+      {%- endfor -%}
+
+    </nav>
+  </div>
+</aside>
+
+<div class="mdc-drawer-scrim"></div>
