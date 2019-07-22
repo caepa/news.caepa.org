@@ -2,11 +2,9 @@ language: ruby
 rvm:
   - 2.5.3
 
-gem: --no-document --no-rdoc --no-ri
-
 before_install:
-  - gem update --system
-  - gem install bundler
+  - gem update --system --no-document
+  - gem install bundler --no-rdoc --no-ri
 
 script:
   - bundle exec jekyll build
