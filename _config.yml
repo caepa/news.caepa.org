@@ -105,6 +105,7 @@ markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-github-metadata
   - jekyll-seo-tag
   - jekyll-sitemap
 feed:
