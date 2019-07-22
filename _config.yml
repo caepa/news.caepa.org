@@ -122,6 +122,7 @@ exclude:
   - package.json
   - README.md
   - staticman.yml
+  - vendor
   - webpack.config.js
   - webpack.style-bundle.js
 include:
