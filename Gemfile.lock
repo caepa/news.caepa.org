@@ -256,10 +256,6 @@ PLATFORMS
 DEPENDENCIES
   github-pages (= 198)
   html-proofer
-  jekyll-feed
-  jekyll-github-metadata
-  jekyll-seo-tag
-  jekyll-sitemap
 
 BUNDLED WITH
    2.0.1
