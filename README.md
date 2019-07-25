@@ -21,13 +21,17 @@ How-to update CSS `assets/css/main.css`
 Check for outdated packages and update
 ```
 npm outdated
-npm update --save-dev
+npm update --save-dev &&
+npm ci
 ```
 
 Update CSS packages
 ```
 npm install normalize-scss@latest --save &&
-npm install material-components-web@latest --save
+npm install @primer/css@latest --save &&
+npm install material-components-web@latest --save &&
+npm ci &&
+npm start
 ```
 
 Reset and install dependencies as specified in ```package-lock.json``` only
@@ -37,7 +41,7 @@ npm ci
 
 Run ```webpack.config.js``` to rebuild ```main.css```
 ```
-npm restart
+npm start
 ```
 
 Reset node_modules
