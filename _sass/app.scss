@@ -47,7 +47,7 @@ $mdc-layout-grid-max-width: 840px;
 }
 
 /////
-a:not(.mdc-list-item) {
+a:not([class*='mdc-']) {
   color: $mdc-theme-primary;
   font-weight: bold;
   text-decoration: none;
