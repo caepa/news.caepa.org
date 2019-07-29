@@ -103,7 +103,7 @@ layout: default
               <span class="mdc-list-item__text">
                 <span class="mdc-list-item__primary-text">{{ post.title | escape }}</span>
                 <span class="mdc-list-item__secondary-text">
-                  <time datetime="{{ page.date | date_to_xmlschema }}">
+                  <time datetime="{{ post.date | date_to_xmlschema }}">
                     {{ post.date | date: date_format }}
                   </time>
                   {%- if post.author -%}

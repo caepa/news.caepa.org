@@ -12,31 +12,31 @@ layout: index__default
 
         {{ content }}
 
-        {% for page in posts limit:1 %}
+        {% for post in posts limit:1 %}
         <section class="mdc-card mdc-card--outlined">
 
           <header class="mdc-card__primary">
-            <h2 class="mdc-card__post-title">{{ page.title | escape }}</h2>
+            <h2 class="mdc-card__post-title">{{ post.title | escape }}</h2>
             <p class="mdc-card__post-meta">
-              <time class="mdc-card__post-dt-published" datetime="{{ page.date | date_to_xmlschema }}">
+              <time class="mdc-card__post-dt-published" datetime="{{ post.date | date_to_xmlschema }}">
                 {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-                {{ page.date | date: date_format }}
+                {{ post.date | date: date_format }}
               </time>
-              {%- if page.author -%}
+              {%- if post.author -%}
                 • <span>
-                    <span class="mdc-card__post-author">{{ page.author | escape }}</span>
+                    <span class="mdc-card__post-author">{{ post.author | escape }}</span>
                   </span>
               {%- endif -%}
             </p>
           </header>
 
           <div class="mdc-card__secondary">
-            {{ page.content | strip_html | truncatewords:50 }}
+            {{ post.content | strip_html | truncatewords:50 }}
           </div>
 
           <footer class="mdc-card__actions">
             <div class="mdc-card__action-buttons">
-              <a class="mdc-card__action mdc-card__action--button mdc-button" href="{{ page.url }}">
+              <a class="mdc-card__action mdc-card__action--button mdc-button" href="{{ post.url }}">
                 <span class="mdc-button__label">Read Article</span>
                 <i class="mdc-button__icon material-icons" aria-hidden="true">arrow_forward</i>
               </a>
@@ -48,31 +48,31 @@ layout: index__default
 
       </div>
 
-      {% for page in posts offset:1 limit:2 %}
+      {% for post in posts offset:1 limit:2 %}
       <div class="mdc-layout-grid__cell--span-6-desktop
                   mdc-layout-grid__cell--span-4-tablet
                   mdc-layout-grid__cell--span-4-phone">
 
         <section class="mdc-card mdc-card--outlined">
-          <a class="mdc-card__primary-action" href="{{ page.url }}" tabindex="0">
+          <a class="mdc-card__primary-action" href="{{ post.url }}" tabindex="0">
 
             <header class="mdc-card__primary">
-              <h2 class="mdc-card__post-title mdc-typography mdc-typography--headline6">{{ page.title | escape }}</h2>
+              <h2 class="mdc-card__post-title mdc-typography mdc-typography--headline6">{{ post.title | escape }}</h2>
               <p class="mdc-card__post-meta mdc-typography mdc-typography--subtitle1">
-                <time class="mdc-card__post-dt-published" datetime="{{ page.date | date_to_xmlschema }}">
+                <time class="mdc-card__post-dt-published" datetime="{{ post.date | date_to_xmlschema }}">
                   {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-                  {{ page.date | date: date_format }}
+                  {{ post.date | date: date_format }}
                 </time>
-                {%- if page.author -%}
+                {%- if post.author -%}
                   • <span>
-                      <span class="mdc-card__post-author">{{ page.author | escape }}</span>
+                      <span class="mdc-card__post-author">{{ post.author | escape }}</span>
                     </span>
                 {%- endif -%}
               </p>
             </header>
 
             <div class="mdc-card__secondary mdc-typography mdc-typography--body1">
-              {{ page.content | strip_html | truncatewords:25 }}
+              {{ post.content | strip_html | truncatewords:25 }}
             </div>
 
           </a>
@@ -98,7 +98,7 @@ layout: index__default
               <span class="mdc-list-item__text">
                 <span class="mdc-list-item__primary-text">{{ post.title | escape }}</span>
                 <span class="mdc-list-item__secondary-text">
-                  <time datetime="{{ page.date | date_to_xmlschema }}">
+                  <time datetime="{{ post.date | date_to_xmlschema }}">
                     {{ post.date | date: date_format }}
                   </time>
                   {%- if post.author -%}
