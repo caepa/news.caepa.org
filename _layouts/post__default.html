@@ -97,7 +97,7 @@ layout: default
             <div class="mdc-list-divider" role="seperator"></div>
             {%- endunless-%}
 
-            <a class="mdc-list-item" href="{{ post.url | relative_url }}" role="option" {%- if forloop.first -%} tabindex="0" {%- endif -%}>
+            <a class="mdc-list-item" href="{{ post.url | relative_url }}" role="option" {%- if forloop.first %} tabindex="0" {%- endif -%}>
 
               {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
               <span class="mdc-list-item__text">
