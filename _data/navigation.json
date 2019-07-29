@@ -1,22 +1,22 @@
 [
   {
     "icon": "check_box",
-    "url": "/abea",
+    "url": "http://www.caepa.org/abea",
     "title": "ABEA (Certification)",
   },
   {
     "icon": "assignment",
-    "url": "/bylaws",
+    "url": "http://www.caepa.org/bylaws",
     "title": "CAEPA Bylaws",
   },
   {
     "icon": "info",
-    "url": "/factsheets",
+    "url": "http://www.caepa.org/factsheets",
     "title": "Factsheets",
   },
   {
     "icon": "description",
-    "url": "/forms",
+    "url": "http://www.caepa.org/forms",
     "title": "Forms",
   },
   {
@@ -26,12 +26,12 @@
   },
   {
     "icon": "event",
-    "url": "/professional-learning",
+    "url": "http://www.caepa.org/professional-learning",
     "title": "Professional Learning",
   },
   {
     "icon": "extension",
-    "url": "/resources",
+    "url": "http://www.caepa.org/resources",
     "title": "Resource Sharing",
   }
 ]
