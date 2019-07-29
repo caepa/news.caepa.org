@@ -6,7 +6,7 @@ tags: [Tech Tip Tuesday, CDE]
 ---
 This web-tool is a reimagined version of the old-fashioned webquest. You can take any webpage and add your content in the form of text-based instructions, quizzes, embedded videos, inserted images, and even discussion threads.  This could be a powerful tool for teachers and trainers!
 
-{% include embed-media.html id=page.video-url %}
+{% include_relative embed-media.html id=page.video-url %}
 
 Items to consider while watching:
 

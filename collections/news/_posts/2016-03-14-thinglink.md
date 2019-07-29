@@ -6,7 +6,7 @@ tags: [Tech Tip Tuesday, CDE]
 ---
 Today's #TechTipTuesday video will show you a great way to make interactive images that can act as a teaching/training tool. The tool is Thinglink and it allows you to tag images with text boxes, more images, videos, and web links.  All of these tags are embedded directly into the image; which makes it come to life with your explanations and scaffolds learning with links to outside sources.
 
-{% include embed-media.html id=page.video-url %}
+{% include_relative embed-media.html id=page.video-url %}
 
 Items to consider while watching:
 

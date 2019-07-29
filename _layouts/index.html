@@ -1,0 +1,119 @@
+---
+layout: index__default
+---
+{%- assign posts = site.posts -%}
+
+<article class="index">
+  <div class="mdc-layout-grid">
+    <div class="mdc-layout-grid__inner">
+      <div class="mdc-layout-grid__cell--span-12">
+
+        <h1 class="index__title">{{ page.title | default: "Index" }}</h1>
+
+        {{ content }}
+
+        {% for page in posts limit:1 %}
+        <section class="mdc-card mdc-card--outlined">
+
+          <header class="mdc-card__primary">
+            <h2 class="mdc-card__post-title">{{ page.title | escape }}</h2>
+            <p class="mdc-card__post-meta">
+              <time class="mdc-card__post-dt-published" datetime="{{ page.date | date_to_xmlschema }}">
+                {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+                {{ page.date | date: date_format }}
+              </time>
+              {%- if page.author -%}
+                • <span>
+                    <span class="mdc-card__post-author">{{ page.author | escape }}</span>
+                  </span>
+              {%- endif -%}
+            </p>
+          </header>
+
+          <div class="mdc-card__secondary">
+            {{ page.content | strip_html | truncatewords:50 }}
+          </div>
+
+          <footer class="mdc-card__actions">
+            <div class="mdc-card__action-buttons">
+              <a class="mdc-card__action mdc-card__action--button mdc-button" href="{{ page.url }}">
+                <span class="mdc-button__label">Read Article</span>
+                <i class="mdc-button__icon material-icons" aria-hidden="true">arrow_forward</i>
+              </a>
+            </div>
+          </footer>
+
+        </section>
+        {% endfor %}
+
+      </div>
+
+      {% for page in posts offset:1 limit:2 %}
+      <div class="mdc-layout-grid__cell--span-6-desktop
+                  mdc-layout-grid__cell--span-4-tablet
+                  mdc-layout-grid__cell--span-4-phone">
+
+        <section class="mdc-card mdc-card--outlined">
+          <a class="mdc-card__primary-action" href="{{ page.url }}" tabindex="0">
+
+            <header class="mdc-card__primary">
+              <h2 class="mdc-card__post-title mdc-typography mdc-typography--headline6">{{ page.title | escape }}</h2>
+              <p class="mdc-card__post-meta mdc-typography mdc-typography--subtitle1">
+                <time class="mdc-card__post-dt-published" datetime="{{ page.date | date_to_xmlschema }}">
+                  {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+                  {{ page.date | date: date_format }}
+                </time>
+                {%- if page.author -%}
+                  • <span>
+                      <span class="mdc-card__post-author">{{ page.author | escape }}</span>
+                    </span>
+                {%- endif -%}
+              </p>
+            </header>
+
+            <div class="mdc-card__secondary mdc-typography mdc-typography--body1">
+              {{ page.content | strip_html | truncatewords:25 }}
+            </div>
+
+          </a>
+        </section>
+
+      </div>
+      {% endfor %}
+
+      {%- if posts.size > 3 -%}
+      <div class="mdc-layout-grid__cell--span-12">
+        <section class="mdc-card mdc-card--outlined">
+          <nav class="mdc-list mdc-list--two-line" role="listbox" data-mdc-auto-init="MDCList">
+
+            {%- for post in posts offset:3 limit:7 -%}
+
+            {%- unless forloop.first -%}
+            <div class="mdc-list-divider" role="seperator"></div>
+            {%- endunless-%}
+
+            <a class="mdc-list-item" href="{{ post.url | relative_url }}" role="option" {%- if forloop.first -%} tabindex="0" {%- endif -%}>
+
+              {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+              <span class="mdc-list-item__text">
+                <span class="mdc-list-item__primary-text">{{ post.title | escape }}</span>
+                <span class="mdc-list-item__secondary-text">
+                  <time datetime="{{ page.date | date_to_xmlschema }}">
+                    {{ post.date | date: date_format }}
+                  </time>
+                  {%- if post.author -%}
+                  • <span>{{ post.author | escape }}</span>
+                  {%- endif -%}
+                </span>
+              </span>
+            </a>
+            {%- endfor -%}
+
+          </nav>
+        </section>
+      </div>
+      {%- endif -%}
+
+    </div>
+  </div>
+</article>

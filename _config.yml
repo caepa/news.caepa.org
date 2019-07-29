@@ -91,7 +91,7 @@ defaults:
   - scope:
       path: ""
     values:
-      image: /assets/img/caepa/icon.svg
+      image: icon.svg
   - scope:
       path: ""
       type: "posts"

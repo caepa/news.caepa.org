@@ -6,7 +6,7 @@ tags: [Tech Tip Tuesday, CDE]
 ---
 Free, online backchannel chat service called TodaysMeet. Backchannel chats are great for conferences, large classrooms, or classes that are connecting from different areas / rooms.
 
-{% include embed-media.html id=page.video-url %}
+{% include_relative embed-media.html id=page.video-url %}
 
 Items to consider while watching:
 

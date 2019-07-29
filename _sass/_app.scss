@@ -35,11 +35,13 @@ $mdc-layout-grid-max-width: 840px;
 /////
 .mdc-top-app-bar__brand {
   display: flex;
+  flex-grow: 1;
   align-items: center;
 }
 
 .mdc-top-app-bar__logo {
-  height: 32px;
+  height: 1.25rem; // smaller
+  // height: 32px; // bigger
   padding-left: 12px;
 }
 .mdc-top-app-bar__title {
@@ -94,7 +96,7 @@ form {
 .mdc-card {
   margin-bottom: 24px;
 
-  & :last-child {
+  &:last-child {
     margin-bottom: 0,
   }
 }
@@ -112,18 +114,37 @@ a.mdc-card__primary-action {
 .mdc-card__primary,
 .mdc-card__secondary {
   padding: 0 16px;
+}
 
-  &:last-child {
-    padding-bottom: 16px;
-  }
+.mdc-card__primary,
+.mdc-card__secondary:last-child {
+  padding-bottom: 16px;
+}
+
+.mdc-card__post-meta {
+  margin: 0;
+}
+
+/////
+.mdc-list-divider {
+  @include mdc-theme-prop(border-color, rgba(224,224,224));
+}
+
+/////
+.related-content {
+  background-color: rgba(66,66,66,0.1);
 }
 
 /////
 .site-footer {
   display: flex;
   align-items: center;
-  height: 100vh;
-  background-color: rgba(66,66,66,0.1);
+  min-height: 100vh;
+  @include mdc-theme-prop(background-color, secondary);
+
+  & * {
+    @include mdc-theme-prop(color, on-secondary);
+  }
 
   & .mdc-layout-grid {
     width: 100vw;

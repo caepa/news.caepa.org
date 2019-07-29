@@ -3,8 +3,8 @@
     <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
       <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button">menu</button>
       <span class="mdc-top-app-bar__brand">
-        <img class="mdc-top-app-bar__logo" src="{{ page.image }}" alt="caepa logo" />
-        <h1 class="mdc-top-app-bar__title">{{ page.categories | default: "News" }}</h1>
+        <img class="mdc-top-app-bar__logo" src="{{ page.image | default: 'caepa-title.svg' | prepend: '/assets/img/caepa/' }}" alt="CAEPA" />
+        <span class="mdc-top-app-bar__title">{{ page.categories | default: "News" }}</span>
       </span>
     </section>
     <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
@@ -24,7 +24,7 @@
 
             {%- for data in site.data.navigation -%}
 
-            <a class="mdc-list-item" href="{{ data.url }}" role="menuitem">
+            <a class="mdc-list-item" href="{{ data.url | absolute_url }}" role="menuitem">
               <i class="material-icons mdc-list-item__graphic" aria-hidden="true">{{ data.icon }}</i>
               <span class="mdc-list-item__text">{{ data.title }}</span>
             </a>

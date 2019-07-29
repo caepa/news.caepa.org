@@ -1,0 +1,126 @@
+---
+layout: default
+---
+
+{%- include mdc-top-app-bar.html -%}
+
+{%- include mdc-drawer.html -%}
+
+<main class="mdc-top-app-bar--fixed-adjust" aria-label="Content">
+
+  {{ content }}
+
+</main>
+
+<aside class="related-content">
+  <div class="mdc-layout-grid">
+    <div class="mdc-layout-grid__inner">
+
+      <div class="mdc-layout-grid__cell--span-12">
+        <h2 class="related-content__title">{{ page.list_title | default: "Related Articles" }}</h2>
+      </div>
+
+      {%- comment -%}<!-- Next post -->{%- endcomment -%}
+      {%- if page.next -%}
+      <div class="mdc-layout-grid__cell--span-6-desktop
+                  mdc-layout-grid__cell--span-4-tablet
+                  mdc-layout-grid__cell--span-4-phone">
+
+        <section class="mdc-card mdc-card--outlined">
+          <a class="mdc-card__primary-action" href="{{ page.next.url }}" tabindex="0">
+
+            <header class="mdc-card__primary">
+              <span class="mdc-typography mdc-typography--overline">Next</span>
+              <h3 class="mdc-card__post-title mdc-typography mdc-typography--headline6">{{ page.next.title | escape }}</h3>
+              <p class="mdc-card__post-meta mdc-typography mdc-typography--subtitle1">
+                <time class="mdc-card__post-dt-published" datetime="{{ page.date | date_to_xmlschema }}">
+                  {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+                  {{ page.next.date | date: date_format }}
+                </time>
+                {%- if page.author -%}
+                • <span class="mdc-card__post-author">{{ page.next.author | escape }}</span>
+                {%- endif -%}</p>
+            </header>
+
+            <div class="mdc-card__secondary mdc-typography mdc-typography--body1">
+              {{ page.next.content | strip_html | truncatewords:25 }}
+            </div>
+
+          </a>
+        </section>
+
+      </div>
+      {%- endif -%}
+
+      {%- comment -%}<!-- Previous post -->{%- endcomment -%}
+      {%- if page.previous -%}
+      <div class="mdc-layout-grid__cell--span-6-desktop
+                  mdc-layout-grid__cell--span-4-tablet
+                  mdc-layout-grid__cell--span-4-phone">
+
+        <section class="mdc-card mdc-card--outlined">
+          <a class="mdc-card__primary-action" href="{{ page.previous.url }}" tabindex="0">
+
+            <header class="mdc-card__primary">
+              <span class="mdc-typography mdc-typography--overline">Previous</span>
+              <h3 class="mdc-card__post-title mdc-typography mdc-typography--headline6">{{ page.previous.title | escape }}</h3>
+              <p class="mdc-card__post-meta mdc-typography mdc-typography--subtitle1">
+                <time class="mdc-card__post-dt-published" datetime="{{ page.date | date_to_xmlschema }}">
+                  {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+                  {{ page.previous.date | date: date_format }}
+                </time>
+                {%- if page.author -%}
+                • <span class="mdc-card__post-author">{{ page.previous.author | escape }}</span>
+                {%- endif -%}</p>
+            </header>
+
+            <div class="mdc-card__secondary mdc-typography mdc-typography--body1">
+              {{ page.previous.content | strip_html | truncatewords:25 }}
+            </div>
+
+          </a>
+        </section>
+
+      </div>
+      {%- endif -%}
+
+      {%- comment -%}<!-- Past posts -->{%- endcomment -%}
+      {%- if site.posts.size > 0 -%}
+      <div class="mdc-layout-grid__cell--span-12">
+        <section class="mdc-card mdc-card--outlined">
+          <nav class="mdc-list mdc-list--two-line" role="listbox" data-mdc-auto-init="MDCList">
+
+            {%- assign posts = site.posts | where_exp:"post","post.url != page.url" | sample:5 -%}
+            {%- for post in posts -%}
+
+            {%- unless forloop.first -%}
+            <div class="mdc-list-divider" role="seperator"></div>
+            {%- endunless-%}
+
+            <a class="mdc-list-item" href="{{ post.url | relative_url }}" role="option" {%- if forloop.first -%} tabindex="0" {%- endif -%}>
+
+              {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+              <span class="mdc-list-item__text">
+                <span class="mdc-list-item__primary-text">{{ post.title | escape }}</span>
+                <span class="mdc-list-item__secondary-text">
+                  <time datetime="{{ page.date | date_to_xmlschema }}">
+                    {{ post.date | date: date_format }}
+                  </time>
+                  {%- if post.author -%}
+                  • <span>{{ post.author | escape }}</span>
+                  {%- endif -%}
+                </span>
+              </span>
+            </a>
+            {%- endfor -%}
+
+          </nav>
+        </section>
+      </div>
+      {%- endif -%}
+
+    </div>
+  </div>
+</aside>
+
+{%- include footer.html -%}

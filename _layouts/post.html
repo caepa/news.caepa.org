@@ -1,130 +1,38 @@
 ---
-layout: default
+layout: post__default
 ---
 
-<article class="post markdown-body" itemscope itemtype="http://schema.org/BlogPosting">
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="mdc-layout-grid">
+    <div class="mdc-layout-grid__inner">
+      <div class="mdc-layout-grid__cell--span-12">
 
-  <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
-    <p class="post-meta">
-      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        {{ page.date | date: date_format }}
-      </time>
-      {%- if page.author -%}
-        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author | escape }}</span></span>
-      {%- endif -%}</p>
-  </header>
+        <header class="post__header">
+          <h1 class="post__title" itemprop="name headline">{{ page.title | escape }}</h1>
+          <p class="post__meta">
+            <time class="post__meta--dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+              {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+              {{ page.date | date: date_format }}
+            </time>
+            {%- if page.author -%}
+              • <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+                  <span class="post__meta--p-author" itemprop="name">{{ page.author | escape }}</span>
+                </span>
+            {%- endif -%}
+          </p>
+        </header>
 
-  <div class="post-content e-content" itemprop="articleBody">
-    {{ content }}
+        <div class="post__content" itemprop="articleBody">
+          {{ content }}
+        </div>
+
+        <footer class="post__footer">
+          <!-- Add share links -->
+        </footer>
+
+        <a class="post__url" href="{{ page.url | relative_url }}" hidden></a>
+
+      </div>
+    </div>
   </div>
-
-  <footer>
-    <!-- Add share links -->
-  </footer>
-
-  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
-
-<aside>
-  <h2 class="post-list-heading">{{ page.list_title | default: "Past News" }}</h2>
-
-  <div class="mdc-layout-grid__inner">
-    {%- comment -%}<!-- Next post -->{%- endcomment -%}
-    {%- if page.next -%}
-    <div class="mdc-layout-grid__cell--span-6-desktop
-                mdc-layout-grid__cell--span-4-tablet
-                mdc-layout-grid__cell--span-4-phone">
-
-      <article class="mdc-card mdc-card--outlined">
-        <a class="mdc-card__primary-action" href="{{ page.next.url }}" tabindex="0">
-
-          <header class="mdc-card__primary">
-            <span class="mdc-typography mdc-typography--overline">Next</span>
-            <h3 class="mdc-card__title mdc-typography mdc-typography--headline6">{{ page.next.title | escape }}</h3>
-            <p class="mdc-card__subtitle mdc-typography mdc-typography--subtitle1">
-              <time>
-                {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-                {{ page.next.date | date: date_format }}
-              </time>
-              {%- if page.author -%}
-              • <span class="p-author">{{ page.next.author | escape }}</span>
-              {%- endif -%}</p>
-          </header>
-
-          <div class="mdc-card__secondary mdc-typography mdc-typography--body1">
-            {{ page.next.content | truncatewords:25 }}
-          </div>
-
-        </a>
-      </article>
-
-    </div>
-    {%- endif -%}
-
-    {%- comment -%}<!-- Previous post -->{%- endcomment -%}
-    {%- if page.previous -%}
-    <div class="mdc-layout-grid__cell--span-6-desktop
-                mdc-layout-grid__cell--span-4-tablet
-                mdc-layout-grid__cell--span-4-phone">
-
-      <article class="mdc-card mdc-card--outlined">
-        <a class="mdc-card__primary-action" href="{{ page.previous.url }}" tabindex="0">
-
-          <header class="mdc-card__primary">
-            <span class="mdc-typography mdc-typography--overline">Previous</span>
-            <h3 class="mdc-card__title mdc-typography mdc-typography--headline6">{{ page.previous.title | escape }}</h3>
-            <p class="mdc-card__subtitle mdc-typography mdc-typography--subtitle1">
-              <time>
-                {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-                {{ page.previous.date | date: date_format }}
-              </time>
-              {%- if page.author -%}
-              • <span class="p-author">{{ page.previous.author | escape }}</span>
-              {%- endif -%}</p>
-          </header>
-
-          <div class="mdc-card__secondary mdc-typography mdc-typography--body1">
-            {{ page.previous.content | truncatewords:25 }}
-          </div>
-
-        </a>
-      </article>
-
-    </div>
-    {%- endif -%}
-  </div>
-
-  {%- comment -%}<!-- Past posts -->{%- endcomment -%}
-  {%- if site.posts.size > 0 -%}
-  <nav class="mdc-list mdc-list--two-line" data-mdc-auto-init="MDCList">
-
-    {%- assign posts = site.posts | where_exp:"post","post.url != page.url" | sample:5 -%}
-    {%- for post in posts -%}
-    <div class="mdc-list-divider" role="seperator"></div>
-    <a class="mdc-list-item" href="{{ post.url | relative_url }}" role="option" {%- if forloop.first -%} tabindex="0" {%- endif -%}>
-
-      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-      <span class="mdc-list-item__text">
-        <span class="mdc-list-item__primary-text">{{ post.title | escape }}</span>
-        <span class="mdc-list-item__secondary-text">
-          <time>
-            {{ post.date | date: date_format }}
-          </time>
-          {%- if post.author -%}
-          • <span>{{ post.author | escape }}</span>
-          {%- endif -%}
-        </span>
-
-        {%- if site.show_excerpts -%}
-        {{ post.excerpt }}
-        {%- endif -%}
-
-      </span>
-    </a>
-    {%- endfor -%}
-
-  </nav>
-  {%- endif -%}
-</aside>

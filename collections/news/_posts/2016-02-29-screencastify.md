@@ -6,7 +6,7 @@ tags: [Tech Tip Tuesday, CDE]
 ---
 This tool will allow you to create videos/tutorials of work you are doing on your computer.
 
-{% include embed-media.html id=page.video-url %}
+{% include_relative embed-media.html id=page.video-url %}
 
 Items to consider while watching:
 

@@ -6,7 +6,7 @@ tags: [Tech Tip Tuesday, CDE]
 ---
 This tool allows you to see current news topics through the lens of three different viewpoints.  This is different than similar news services because the perspective articles are selected by real people (instead of roboservices). The articles should give you valuable insights into the different viewpoints on a particular topic!
 
-{% include embed-media.html id=page.video-url %}
+{% include_relative embed-media.html id=page.video-url %}
 
 Items to consider while watching:
 
