@@ -94,7 +94,7 @@ layout: default
             {%- for post in posts -%}
 
             {%- unless forloop.first -%}
-            <div class="mdc-list-divider" role="seperator"></div>
+            <div class="mdc-list-divider"></div>
             {%- endunless-%}
 
             <a class="mdc-list-item" href="{{ post.url | relative_url }}" role="option" {%- if forloop.first %} tabindex="0" {%- endif -%}>

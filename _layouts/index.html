@@ -89,10 +89,10 @@ layout: index__default
             {%- for post in posts offset:3 limit:7 -%}
 
             {%- unless forloop.first -%}
-            <div class="mdc-list-divider" role="seperator"></div>
+            <div class="mdc-list-divider"></div>
             {%- endunless-%}
 
-            <a class="mdc-list-item" href="{{ post.url | relative_url }}" role="option" {%- if forloop.first -%} tabindex="0" {%- endif -%}>
+            <a class="mdc-list-item" href="{{ post.url | relative_url }}" role="option" {%- if forloop.first %} tabindex="0" {%- endif -%}>
 
               {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
               <span class="mdc-list-item__text">
