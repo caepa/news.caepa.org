@@ -31,7 +31,7 @@ layout: index__default
           </header>
 
           <div class="mdc-card__secondary">
-            {{ post.content | strip_html | truncatewords:50 }}
+            {{ post.content | markdownify | strip_html | truncatewords:50 }}
           </div>
 
           <footer class="mdc-card__actions">
@@ -72,7 +72,7 @@ layout: index__default
             </header>
 
             <div class="mdc-card__secondary mdc-typography mdc-typography--body1">
-              {{ post.content | strip_html | truncatewords:25 }}
+              {{ post.content | markdownify | strip_html | truncatewords:25 }}
             </div>
 
           </a>

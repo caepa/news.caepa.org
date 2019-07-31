@@ -43,7 +43,7 @@ layout: default
             </header>
 
             <div class="mdc-card__secondary mdc-typography mdc-typography--body1">
-              {{ page.next.content | strip_html | truncatewords:25 }}
+              {{ page.next.content | markdownify | strip_html | truncatewords:25 }}
             </div>
 
           </a>
@@ -75,7 +75,7 @@ layout: default
             </header>
 
             <div class="mdc-card__secondary mdc-typography mdc-typography--body1">
-              {{ page.previous.content | strip_html | truncatewords:25 }}
+              {{ page.previous.content | markdownify | strip_html | truncatewords:25 }}
             </div>
 
           </a>
