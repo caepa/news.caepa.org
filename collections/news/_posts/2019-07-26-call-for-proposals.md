@@ -11,10 +11,4 @@ Proposals are due: August 15th, 2019
 
 We look forward to seeing what the brilliant educators in Colorado have to share!
 
-## Presentation Proposal
-
-The Colorado Adult Education Professional Association, CAEPA, invites you to submit a proposal for the 2019 Rendezvous. This year’s theme is, “Moving It Forward” and we have thought up a list of new session strands to take us there. Sessions are 1 hour and 15 minutes each.
-
-For strand description see: http://www.caepa.org/rendezvous/call-for-proposals.html
-
-For more information, see: http://www.caepa.org/rendezvous/call-for-proposals-faq.html
+[Fill out Form](https://docs.google.com/forms/d/e/1FAIpQLSck5EsFi0ePl0E-HrOTvTlr6TlRwIitRKyj42F8xXtbjnQUdA/viewform?vc=0&c=0&w=1&usp=mail_form_link)
